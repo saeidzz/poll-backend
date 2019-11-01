@@ -2,9 +2,7 @@ package ir.rabbit.poll.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author saeid zangeneh
@@ -17,7 +15,10 @@ import javax.persistence.Table;
 @Setter
 @AllArgsConstructor
 @ToString
+@NoArgsConstructor
 public class Config {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Enumerated
     private PollType pollType;

@@ -2,10 +2,7 @@ package ir.rabbit.poll.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -19,7 +16,10 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @ToString
+@NoArgsConstructor
 public class Like {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @ManyToOne
     private Comment comment;

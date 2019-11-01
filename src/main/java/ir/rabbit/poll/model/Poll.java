@@ -2,10 +2,7 @@ package ir.rabbit.poll.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -18,7 +15,10 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @ToString
+@NoArgsConstructor
 public class Poll {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @OneToOne
     private User owner;
