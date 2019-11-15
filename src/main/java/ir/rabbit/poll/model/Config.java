@@ -14,7 +14,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 @NoArgsConstructor
 public class Config {
     @Id
@@ -31,4 +30,20 @@ public class Config {
     private String themeName;
     private String chartType;
     private String password;
+
+    @Override
+    public String toString() {
+        return "Config{" +
+                "id=" + id +
+                ", pollType=" + pollType +
+                ", securityLevel=" + securityLevel +
+                ", timeLimited=" + timeLimited +
+                ", showResultToOther=" + showResultToOther +
+                ", comment=" + comment +
+                ", selectMultiple=" + selectMultiple +
+                ", themeName='" + themeName + '\'' +
+                ", chartType='" + chartType + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

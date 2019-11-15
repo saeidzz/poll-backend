@@ -15,7 +15,6 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 @NoArgsConstructor
 public class Comment {
     @Id
@@ -29,6 +28,17 @@ public class Comment {
     @OneToMany
     private List<Like> likes;
     private Date date;
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", commenter=" + commenter +
+                ", poll=" + poll +
+                ", date=" + date +
+                '}';
+    }
 
 
 }

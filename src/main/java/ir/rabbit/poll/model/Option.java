@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 @NoArgsConstructor
 public class Option {
     @Id
@@ -23,4 +22,14 @@ public class Option {
     private String image;
     @OneToOne
     private Poll poll;
+
+    @Override
+    public String toString() {
+        return "Option{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", image='" + image + '\'' +
+                ", poll=" + poll +
+                '}';
+    }
 }

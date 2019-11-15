@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
+
 @NoArgsConstructor
 public class UserDto {
     private Long id;
@@ -25,4 +25,19 @@ public class UserDto {
     private List<PollDto> polls;
     private List<LikeDto> likeDtos;
     private List<CommentDto> commentDtos;
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", password='" + password + '\'' +
+                ", memberShipDate=" + memberShipDate +
+                ", polls=" + polls +
+                ", likeDtos=" + likeDtos +
+                ", commentDtos=" + commentDtos +
+                '}';
+    }
 }

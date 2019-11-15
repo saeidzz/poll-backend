@@ -15,7 +15,6 @@ import java.util.Date;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 @NoArgsConstructor
 public class Like {
     @Id
@@ -26,4 +25,36 @@ public class Like {
     @OneToOne
     private User liker;
     private Date date;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Comment getComment() {
+        return comment;
+    }
+
+    public void setComment(Comment comment) {
+        this.comment = comment;
+    }
+
+    public User getLiker() {
+        return liker;
+    }
+
+    public void setLiker(User liker) {
+        this.liker = liker;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }

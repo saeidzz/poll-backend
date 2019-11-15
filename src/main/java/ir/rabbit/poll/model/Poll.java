@@ -14,7 +14,6 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 @NoArgsConstructor
 public class Poll {
     @Id
@@ -29,4 +28,16 @@ public class Poll {
     private Config config;
     @OneToMany
     private List<Comment> comments;
+
+    @Override
+    public String toString() {
+        return "Poll{" +
+                "id=" + id +
+                ", owner=" + owner +
+                ", question='" + question + '\'' +
+                ", options=" + options +
+                ", config=" + config +
+                ", comments=" + comments +
+                '}';
+    }
 }
